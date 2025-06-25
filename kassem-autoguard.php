@@ -9,5 +9,16 @@
 
 defined('ABSPATH') or die('No script kiddies please!');
 
-require_once plugin_dir_path(__FILE__) . 'includes/settings.php';
-require_once plugin_dir_path(__FILE__) . 'includes/autoload-cleaner.php';
+$settings_file = plugin_dir_path(__FILE__) . 'includes/settings.php';
+if (file_exists($settings_file)) {
+    require_once $settings_file;
+} else {
+    error_log('Kassem AutoGuard missing file: ' . $settings_file);
+}
+
+$cleaner_file = plugin_dir_path(__FILE__) . 'includes/autoload-cleaner.php';
+if (file_exists($cleaner_file)) {
+    require_once $cleaner_file;
+} else {
+    error_log('Kassem AutoGuard missing file: ' . $cleaner_file);
+}
