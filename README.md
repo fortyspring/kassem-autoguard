@@ -1,5 +1,3 @@
-# Save the README.md content into a file for GitHub
-readme_markdown = """
 # 🛡️ Kassem AutoGuard
 
 **Kassem AutoGuard** هي إضافة ووردبريس قوية مصممة لتحسين أداء الموقع من خلال تنظيف خيارات autoload، مراقبة الجداول، ومنع الأخطاء القاتلة الناتجة عن الخيارات الزائدة.
@@ -36,23 +34,15 @@ readme_markdown = """
 
 ## 💬 الدعم الفني
 
-📧 عبر البريد: support@good-press.net  
+📧 عبر البريد: support@good-press.net
 🌐 عبر GitHub Issues: [فتح تذكرة دعم](https://github.com/fortyspring/kassem-autoguard/issues)
 
 ---
 
 ## 🪪 معلومات المطور
 
-- الاسم: محمد قاسم  
-- الموقع: [good-press.net](https://good-press.net)  
+- الاسم: محمد قاسم
+- الموقع: [good-press.net](https://good-press.net)
 - الترخيص: GPL v2 أو أحدث
 
 > 🚀 تم تطوير هذه الإضافة لمواقع الأخبار العربية التي تحتاج إلى أداء مرتفع وتحكم ذكي في قاعدة البيانات.
-"""
-
-# Save it to a file
-readme_path = "/mnt/data/README.md"
-with open(readme_path, "w", encoding="utf-8") as f:
-    f.write(readme_markdown)
-
-readme_path
