@@ -9,41 +9,41 @@ build/
 target/
 
 # Dependencies
-.venv/
-venv/
 node_modules/
-.julia/
-.zig-cache/
+venv/
+.venv/
+.env
+.env.local
+.env.*
 
 # Logs and temp files
 *.log
 *.tmp
 *.swp
-*.swo
-
-# Environment
-.env
-.env.local
-*.env.*
 
 # Editors
 .vscode/
 .idea/
-*.swp
-*.swo
 
-# OS specific
-.DS_Store
-Thumbs.db
-
-# Testing and coverage
-.coverage
+# Coverage
 coverage/
 htmlcov/
-.mypy_cache/
-.pytest_cache/
+.coverage
 
-# Compression artifacts
+# Python specific
+*.py[cod]
+*$py.class
+*.so
+.Python
+install-sh
+Makefile
+config.log
+config.status
+.libs/
+.pytest_cache/
+.mypy_cache/
+
+# Compression files
 *.zip
 *.gz
 *.tar
