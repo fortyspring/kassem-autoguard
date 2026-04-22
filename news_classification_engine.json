@@ -1,0 +1,485 @@
+{
+  "system_info": {
+    "name": "OSINT News Classification & Publishing Engine",
+    "version": "2026.1",
+    "description": "محرك تصنيف ونشر الأخبار الذكي مع نظام 5W1H وفلترة المصادر",
+    "last_updated": "2026-01-15"
+  },
+
+  "classification_framework": {
+    "mandatory_fields": {
+      "who": {
+        "field_name": "من",
+        "required": true,
+        "description": "الجهة الفاعلة أو الشخص المسؤول عن الحدث",
+        "validation": "يجب تحديد هوية واضحة (اسم، منظمة، دولة)",
+        "examples": ["بنيامين نتنياهو", "الجيش الإسرائيلي", "حزب الله"]
+      },
+      "what": {
+        "field_name": "ماذا",
+        "required": true,
+        "description": "طبيعة الحدث أو الفعل الذي وقع",
+        "validation": "يجب وصف الحدث بدقة (هجوم، تصريح، قرار، معركة)",
+        "examples": ["غارة جوية", "إعلان هدنة", "تصعيد عسكري"]
+      },
+      "why": {
+        "field_name": "لماذا",
+        "required": true,
+        "description": "الدوافع والأسباب الكامنة وراء الحدث",
+        "validation": "يجب توضيح السبب المباشر والاستراتيجي",
+        "examples": ["ردًا على هجوم سابق", "ضغط دولي", "توسيع نفوذ"]
+      },
+      "how": {
+        "field_name": "كيف",
+        "required": true,
+        "description": "الأسلوب والأدوات المستخدمة في تنفيذ الحدث",
+        "validation": "يجب تفصيل الطريقة (عسكري، دبلوماسي، إلكتروني، اقتصادي)",
+        "examples": ["ضربة صاروخية", "حرب سيبرانية", "عقوبات اقتصادية"]
+      },
+      "when": {
+        "field_name": "متى",
+        "required": true,
+        "description": "التوقيت الدقيق للحدث",
+        "validation": "يجب تحديد التاريخ والساعة والتوقيت الزمني",
+        "format": "YYYY-MM-DD HH:MM TZ",
+        "examples": ["2026-01-15 14:30 UTC+2"]
+      },
+      "where": {
+        "field_name": "أين",
+        "required": true,
+        "description": "الموقع الجغرافي الدقيق للحدث",
+        "validation": "يجب تحديد الإحداثيات أو الموقع الواضح",
+        "examples": ["غزة - شمال القطاع", "بيروت - الضاحية الجنوبية", "دمشق - ريف دمشق"]
+      }
+    },
+
+    "source_validation": {
+      "enabled": true,
+      "rule": "أي خبر يأتي من مصدر لا يجيب على جميع أسئلة 5W1H لا يتم نشره",
+      "auto_reject": true,
+      "minimum_confidence": 0.85,
+      "source_tiers": {
+        "tier_1": {
+          "name": "مصادر أولية موثوقة",
+          "weight": 1.0,
+          "examples": ["وكالات أنباء معتمدة", "تصريحات رسمية", "مراسلون ميدانيون"]
+        },
+        "tier_2": {
+          "name": "مصادر ثانوية مؤكدة",
+          "weight": 0.8,
+          "examples": ["وسائل إعلام محلية موثوقة", "تقارير منظمات دولية"]
+        },
+        "tier_3": {
+          "name": "مصادر تحتاج تحقق",
+          "weight": 0.5,
+          "examples": ["شبكات اجتماعية", "مصادر مجهولة"]
+        },
+        "rejected": {
+          "name": "مصادر مرفوضة",
+          "weight": 0.0,
+          "examples": ["مصادر مشكوك بها", "أخبار كاذبة مثبتة"]
+        }
+      }
+    }
+  },
+
+  "hybrid_warfare_classification": {
+    "enabled": true,
+    "description": "نظام تصنيف الحرب المركبة الشاملة",
+    "domains": {
+      "military": {
+        "name": "العسكرية التقليدية",
+        "indicators": ["حركة قوات", "غارات جوية", "قصف مدفعي", "اشتباكات برية"],
+        "weight": 1.0
+      },
+      "cyber": {
+        "name": "الحرب السيبرانية",
+        "indicators": ["هجمات إلكترونية", "اختراق أنظمة", "تعطيل بنية تحتية رقمية"],
+        "weight": 0.9
+      },
+      "information": {
+        "name": "الحرب المعلوماتية",
+        "indicators": ["دعاية", "أخبار كاذبة", "تضليل إعلامي", "حملات تأثير"],
+        "weight": 0.85
+      },
+      "economic": {
+        "name": "الحرب الاقتصادية",
+        "indicators": ["عقوبات", "حصار", "تلاعب بالعملة", "قطع إمدادات"],
+        "weight": 0.8
+      },
+      "political": {
+        "name": "الحرب السياسية",
+        "indicators": ["ضغوط دبلوماسية", "عزل دولي", "حملة تشويه"],
+        "weight": 0.75
+      },
+      "social": {
+        "name": "الحرب الاجتماعية",
+        "indicators": ["تحريض طائفي", "تفكيك نسيج اجتماعي", "تهجير قسري"],
+        "weight": 0.7
+      },
+      "psychological": {
+        "name": "الحرب النفسية",
+        "indicators": ["ترهيب السكان", "دعاية نفسية", "استهداف معنويات"],
+        "weight": 0.75
+      }
+    },
+    
+    "composite_detection": {
+      "enabled": true,
+      "threshold": 2,
+      "description": "إذا تم رصد مجالين أو أكثر يُصنف كـ 'حرب مركبة'",
+      "auto_tag": "HYBRID_WARFARE"
+    }
+  },
+
+  "publishing_workflow": {
+    "stages": [
+      {
+        "stage": 1,
+        "name": "الاستقبال الأولي",
+        "action": "جمع الخبر من المصادر",
+        "validation": "التحقق من وجود مصدر واضح"
+      },
+      {
+        "stage": 2,
+        "name": "تحليل 5W1H",
+        "action": "تعبئة جميع الحقول الإلزامية",
+        "validation": "يجب اكتمال جميع الحقول الستة",
+        "auto_reject_if_incomplete": true
+      },
+      {
+        "stage": 3,
+        "name": "التحقق من التوافق",
+        "action": "مقارنة الخبر مع مصادر متعددة",
+        "validation": "التأكد من عدم التناقض مع معلومات مؤكدة",
+        "cross_reference_check": true
+      },
+      {
+        "stage": 4,
+        "name": "تصنيف الحرب المركبة",
+        "action": "تحديد مجالات الحرب إن وجدت",
+        "validation": "تحليل متعدد الأبعاد"
+      },
+      {
+        "stage": 5,
+        "name": "تقييم المصداقية",
+        "action": "حساب درجة الثقة بناءً على المصدر والتوافق",
+        "validation": "درجة الثقة يجب أن تكون >= 0.85 للنشر",
+        "confidence_threshold": 0.85
+      },
+      {
+        "stage": 6,
+        "name": "القرار النهائي",
+        "action": "نشر / رفض / تأجيل للتحقق",
+        "outcomes": ["PUBLISHED", "REJECTED", "PENDING_VERIFICATION"]
+      }
+    ]
+  },
+
+  "reclassification_engine": {
+    "manual_reclassification": {
+      "enabled": true,
+      "permissions": ["admin", "senior_analyst"],
+      "capabilities": [
+        "تعديل أي حقل من حقول 5W1H",
+        "تغيير تصنيف الحرب المركبة",
+        "إعادة تقييم المصداقية",
+        "إلغاء قرار الرفض أو النشر",
+        "إضافة ملاحظات تحليلية"
+      ]
+    },
+    
+    "automatic_reclassification": {
+      "enabled": true,
+      "triggers": [
+        "وصول معلومات جديدة من مصادر موثوقة",
+        "تناقض مكتشف بعد النشر",
+        "تحديث من مصدر أولي",
+        "طلب مراجعة تلقائي عند انخفاض الثقة"
+      ],
+      "ai_assisted": true,
+      "confidence_recalculation": true
+    },
+
+    "deletion_policy": {
+      "enabled": true,
+      "auto_delete_conditions": [
+        "خبر ثبت كذبه بشكل قاطع",
+        "مصدر تبين أنه مفبرك",
+        "تناقض جوهري لا يمكن حله",
+        "انعدام أحد شروط 5W1H بعد المراجعة",
+        "طلب رسمي من جهة موثوقة مع أدلة"
+      ],
+      "audit_trail": true,
+      "soft_delete": true,
+      "retention_period_days": 90
+    }
+  },
+
+  "news_schema": {
+    "news_item": {
+      "id": "unique_identifier",
+      "timestamp_received": "ISO8601",
+      "source": {
+        "name": "string",
+        "tier": "tier_1|tier_2|tier_3",
+        "url": "string|null",
+        "credibility_score": "float_0_to_1"
+      },
+      "classification_5w1h": {
+        "who": {"value": "string", "confidence": "float", "verified": "boolean"},
+        "what": {"value": "string", "confidence": "float", "verified": "boolean"},
+        "why": {"value": "string", "confidence": "float", "verified": "boolean"},
+        "how": {"value": "string", "confidence": "float", "verified": "boolean"},
+        "when": {"value": "ISO8601", "confidence": "float", "verified": "boolean"},
+        "where": {"value": "string", "coordinates": "object|null", "confidence": "float", "verified": "boolean"}
+      },
+      "hybrid_warfare_tags": {
+        "is_hybrid": "boolean",
+        "domains_detected": ["array_of_domains"],
+        "primary_domain": "string",
+        "secondary_domains": ["array"]
+      },
+      "compatibility_check": {
+        "status": "compatible|incompatible|pending",
+        "conflicting_sources": ["array"],
+        "supporting_sources": ["array"],
+        "resolution_notes": "string|null"
+      },
+      "publishing_decision": {
+        "status": "PUBLISHED|REJECTED|PENDING",
+        "reason": "string",
+        "published_at": "ISO8601|null",
+        "rejected_at": "ISO8601|null",
+        "decision_by": "manual|automatic"
+      },
+      "reclassification_history": [
+        {
+          "timestamp": "ISO8601",
+          "type": "manual|automatic",
+          "changes_made": "object",
+          "analyst_id": "string|null",
+          "reason": "string"
+        }
+      ],
+      "metadata": {
+        "language": "string",
+        "region": "string",
+        "priority_score": "integer_0_to_100",
+        "keywords": ["array"],
+        "related_news_ids": ["array"]
+      }
+    }
+  },
+
+  "validation_rules": {
+    "pre_publish_checks": [
+      {
+        "rule_id": "R001",
+        "name": "اكتمال 5W1H",
+        "condition": "جميع الحقول الستة يجب أن تكون مملوءة ومُتحقق منها",
+        "action_on_fail": "REJECT"
+      },
+      {
+        "rule_id": "R002",
+        "name": "مصداقية المصدر",
+        "condition": "درجة مصداقية المصدر >= 0.7",
+        "action_on_fail": "REJECT"
+      },
+      {
+        "rule_id": "R003",
+        "name": "التوافق مع مصادر أخرى",
+        "condition": "عدم وجود تناقض جوهري مع مصادر مؤكدة",
+        "action_on_fail": "PENDING_VERIFICATION"
+      },
+      {
+        "rule_id": "R004",
+        "name": "درجة الثقة الإجمالية",
+        "condition": "confidence_score >= 0.85",
+        "action_on_fail": "REJECT"
+      },
+      {
+        "rule_id": "R005",
+        "name": "كشف الحرب المركبة",
+        "condition": "إذا وُجدت مؤشرات حرب مركبة يجب تصنيفها",
+        "action_on_fail": "FLAG_FOR_REVIEW"
+      }
+    ],
+
+    "post_publish_monitoring": [
+      {
+        "rule_id": "M001",
+        "name": "مراقبة التناقضات اللاحقة",
+        "trigger": "ظهور معلومات جديدة متناقضة",
+        "action": "إعادة تصنيف تلقائي"
+      },
+      {
+        "rule_id": "M002",
+        "name": "تحديث المصداقية",
+        "trigger": "تقييم جديد للمصدر",
+        "action": "إعادة حساب درجة الثقة"
+      },
+      {
+        "rule_id": "M003",
+        "name": "الحذف الذاتي",
+        "trigger": "ثبوت خطأ الخبر بشكل قاطع",
+        "action": "RETRACT_AND_DELETE"
+      }
+    ]
+  },
+
+  "api_endpoints": {
+    "submit_news": {
+      "method": "POST",
+      "path": "/api/v1/news/submit",
+      "description": "إرسال خبر جديد للتصنيف",
+      "required_fields": ["source", "raw_content", "initial_classification"]
+    },
+    "get_classification_status": {
+      "method": "GET",
+      "path": "/api/v1/news/{id}/status",
+      "description": "الحصول على حالة تصنيف خبر معين"
+    },
+    "manual_reclassify": {
+      "method": "PUT",
+      "path": "/api/v1/news/{id}/reclassify",
+      "description": "إعادة تصنيف يدوي للخبر",
+      "permissions": ["admin", "senior_analyst"]
+    },
+    "auto_reclassify": {
+      "method": "POST",
+      "path": "/api/v1/news/{id}/auto-reclassify",
+      "description": "-trigger إعادة تصنيف تلقائي"
+    },
+    "delete_news": {
+      "method": "DELETE",
+      "path": "/api/v1/news/{id}",
+      "description": "حذف خبر (مع الاحتفاظ بسجل التدقيق)",
+      "conditions": "يجب استيفاء شروط الحذف"
+    },
+    "get_published_news": {
+      "method": "GET",
+      "path": "/api/v1/news/published",
+      "description": "الحصول على جميع الأخبار المنشورة",
+      "filters": ["date_range", "region", "hybrid_warfare", "priority"]
+    },
+    "get_rejected_news": {
+      "method": "GET",
+      "path": "/api/v1/news/rejected",
+      "description": "الحصول على الأخبار المرفوضة مع الأسباب"
+    }
+  },
+
+  "sample_news_items": [
+    {
+      "id": "NEWS-2026-001",
+      "timestamp_received": "2026-01-15T14:30:00Z",
+      "source": {
+        "name": "وكالة رويترز",
+        "tier": "tier_1",
+        "url": "https://reuters.com/example",
+        "credibility_score": 0.95
+      },
+      "classification_5w1h": {
+        "who": {"value": "الجيش الإسرائيلي", "confidence": 0.98, "verified": true},
+        "what": {"value": "غارة جوية على موقع في جنوب لبنان", "confidence": 0.96, "verified": true},
+        "why": {"value": "ردًا على إطلاق صواريخ من المنطقة", "confidence": 0.88, "verified": true},
+        "how": {"value": "ضربة جوية بطائرة بدون طيار", "confidence": 0.92, "verified": true},
+        "when": {"value": "2026-01-15T13:45:00Z", "confidence": 0.99, "verified": true},
+        "where": {"value": "جنوب لبنان - قرب الحدود", "coordinates": {"lat": 33.2, "lon": 35.3}, "confidence": 0.94, "verified": true}
+      },
+      "hybrid_warfare_tags": {
+        "is_hybrid": true,
+        "domains_detected": ["military", "information"],
+        "primary_domain": "military",
+        "secondary_domains": ["information"]
+      },
+      "compatibility_check": {
+        "status": "compatible",
+        "conflicting_sources": [],
+        "supporting_sources": ["رويترز", "أسوشيتد برس", "الجيش اللبناني"],
+        "resolution_notes": null
+      },
+      "publishing_decision": {
+        "status": "PUBLISHED",
+        "reason": "جميع الشروط مستوفاة",
+        "published_at": "2026-01-15T14:35:00Z",
+        "rejected_at": null,
+        "decision_by": "automatic"
+      },
+      "reclassification_history": [],
+      "metadata": {
+        "language": "ar",
+        "region": "Lebanon",
+        "priority_score": 92,
+        "keywords": ["غارة جوية", "لبنان", "إسرائيل", "حرب مركبة"],
+        "related_news_ids": []
+      }
+    },
+    {
+      "id": "NEWS-2026-002",
+      "timestamp_received": "2026-01-15T15:00:00Z",
+      "source": {
+        "name": "حساب تويتر مجهول",
+        "tier": "tier_3",
+        "url": null,
+        "credibility_score": 0.3
+      },
+      "classification_5w1h": {
+        "who": {"value": "غير محدد", "confidence": 0.2, "verified": false},
+        "what": {"value": "انفجار كبير", "confidence": 0.4, "verified": false},
+        "why": {"value": "غير معروف", "confidence": 0.1, "verified": false},
+        "how": {"value": "غير معروف", "confidence": 0.1, "verified": false},
+        "when": {"value": "غير محدد", "confidence": 0.3, "verified": false},
+        "where": {"value": "الشرق الأوسط", "coordinates": null, "confidence": 0.2, "verified": false}
+      },
+      "hybrid_warfare_tags": {
+        "is_hybrid": false,
+        "domains_detected": [],
+        "primary_domain": null,
+        "secondary_domains": []
+      },
+      "compatibility_check": {
+        "status": "incompatible",
+        "conflicting_sources": [],
+        "supporting_sources": [],
+        "resolution_notes": "لا توجد مصادر داعمة"
+      },
+      "publishing_decision": {
+        "status": "REJECTED",
+        "reason": "فشل في استيفاء شروط 5W1H - مصدر غير موثوق - معلومات غير مكتملة",
+        "published_at": null,
+        "rejected_at": "2026-01-15T15:02:00Z",
+        "decision_by": "automatic"
+      },
+      "reclassification_history": [],
+      "metadata": {
+        "language": "ar",
+        "region": "Unknown",
+        "priority_score": 5,
+        "keywords": [],
+        "related_news_ids": []
+      }
+    }
+  ],
+
+  "operational_guidelines": {
+    "golden_rules": [
+      "لا خبر يُنشر دون اكتمال جميع عناصر 5W1H",
+      "المصدر غير الموثوق = رفض تلقائي",
+      "التناقض مع معلومات مؤكدة = تعليق للنشر حتى التحقق",
+      "الحرب المركبة يجب تصنيفها بدقة",
+      "إعادة التصنيف متاحة دائمًا عند ظهور معلومات جديدة",
+      "الحذف واجب عند ثبوت الخطأ",
+      "كل عملية مسجلة في سجل التدقيق"
+    ],
+    
+    "quality_metrics": {
+      "accuracy_target": 0.95,
+      "false_positive_max": 0.02,
+      "false_negative_max": 0.03,
+      "average_classification_time_seconds": 45,
+      "manual_review_rate_target": 0.15
+    }
+  }
+}

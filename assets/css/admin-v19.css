@@ -1,0 +1,48 @@
+/* Admin UI V19 - light admin shell with grouped navigation */
+.wrap .so-admin-page{background:#f4f7fb !important;color:#111827 !important;border:1px solid #dde6f0 !important;box-shadow:0 12px 28px rgba(15,23,42,.06) !important}
+.wrap .so-admin-header{background:linear-gradient(135deg,#ffffff,#f7fafc) !important;border:1px solid #dbe3ee !important;box-shadow:0 8px 20px rgba(15,23,42,.05) !important}
+.wrap .so-admin-title,.wrap .so-admin-card h3,.wrap .so-nav-tab.active,.wrap h2,.wrap h1{color:#111827 !important}
+.wrap .so-admin-subtitle,.wrap .so-field-desc,.wrap .so-status-pill,.wrap .so-field-label,.wrap table.so-table td{color:#334155 !important}
+.wrap .so-admin-card,.wrap .so-source-row,.wrap .so-shortcode-box{background:#ffffff !important;border:1px solid #dbe3ee !important;color:#111827 !important;box-shadow:0 8px 20px rgba(15,23,42,.04) !important}
+.wrap .so-shortcode-box{background:#f8fafc !important}
+.wrap .so-input,.wrap .so-select, .wrap textarea.so-input{background:#ffffff !important;border:1px solid #cbd5e1 !important;color:#111827 !important}
+.wrap .so-input:focus,.wrap .so-select:focus{border-color:#2563eb !important;box-shadow:0 0 0 3px rgba(37,99,235,.12) !important}
+.wrap .so-nav-tabs{border-bottom:2px solid #dbe3ee !important;gap:8px !important}
+.wrap .so-nav-tab{background:#eef3f8 !important;color:#334155 !important;border:1px solid #dbe3ee !important;border-radius:999px !important;border-bottom:1px solid #dbe3ee !important;padding:9px 14px !important}
+.wrap .so-nav-tab:hover{background:#e2e8f0 !important;color:#0f172a !important}
+.wrap .so-nav-tab.active{background:#ffffff !important;border-color:#93c5fd !important;box-shadow:0 4px 12px rgba(59,130,246,.12) !important}
+.wrap .so-status-pill{background:#eef3f8 !important;border:1px solid #dbe3ee !important}
+.wrap .so-status-pill.ok{background:#ecfdf3 !important;border-color:#86efac !important;color:#166534 !important}
+.wrap .so-status-pill.warn{background:#fff7ed !important;border-color:#fdba74 !important;color:#9a3412 !important}
+.wrap .so-alert-box{background:#ecfdf3 !important;border-color:#86efac !important;color:#166534 !important}
+.wrap .so-badge-red{background:#fee2e2 !important;color:#b91c1c !important}
+.wrap .so-badge-green{background:#dcfce7 !important;color:#15803d !important}
+.wrap .so-badge-blue{background:#dbeafe !important;color:#1d4ed8 !important}
+.wrap .so-badge-yellow{background:#ffedd5 !important;color:#c2410c !important}
+.wrap table.so-table th{background:#f8fafc !important;color:#1f2937 !important;border-bottom-color:#dbe3ee !important}
+.wrap table.so-table tr:hover td{background:#f8fafc !important}
+.so-v19-section-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.so-v19-section-card{display:flex;flex-direction:column;gap:8px;padding:16px 18px;border-radius:16px;border:1px solid #dbe3ee;background:linear-gradient(180deg,#ffffff,#f8fafc);text-decoration:none;transition:.18s ease;box-shadow:0 8px 16px rgba(15,23,42,.04)}
+.so-v19-section-card strong{font-size:14px;color:#111827}
+.so-v19-section-card span{font-size:12px;line-height:1.7;color:#475569}
+.so-v19-section-card:hover{transform:translateY(-2px);border-color:#93c5fd;box-shadow:0 12px 24px rgba(59,130,246,.09)}
+.so-v19-mode-notice{padding:12px 14px;border-radius:12px;background:#eff6ff;border:1px solid #bfdbfe;color:#1e3a8a;font-size:13px;line-height:1.8;margin-bottom:14px}
+.so-v19-radio-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.so-v19-radio-card{display:flex;align-items:flex-start;gap:10px;padding:14px;border:1px solid #dbe3ee;border-radius:14px;background:#fff;cursor:pointer}
+.so-v19-radio-card input{margin-top:4px}
+.so-v19-radio-card strong{display:block;color:#111827;font-size:14px;margin-bottom:4px}
+.so-v19-radio-card small{display:block;color:#475569;line-height:1.6}
+#adminmenu .wp-submenu .sod-v19-group-title{padding:10px 12px 6px;margin:10px 0 4px;color:#60a5fa;font-size:11px;font-weight:700;text-transform:none;pointer-events:none;opacity:1}
+#adminmenu .wp-submenu .sod-v19-group-title span{display:block;border-top:1px solid rgba(148,163,184,.24);padding-top:8px}
+
+
+/* V19.1.3 main page hard override */
+body.toplevel_page_strategic-osint .so-admin-page,
+body.strategic-osint_page_strategic-osint .so-admin-page{background:#f4f7fb!important;color:#111827!important}
+body.toplevel_page_strategic-osint .so-admin-card,
+body.strategic-osint_page_strategic-osint .so-admin-card{background:#fff!important;border-color:#dbe3ee!important;color:#111827!important}
+body.toplevel_page_strategic-osint .so-shortcode-box,
+body.strategic-osint_page_strategic-osint .so-shortcode-box{background:#f8fafc!important;border-color:#dbe3ee!important;color:#1e3a8a!important}
+body.toplevel_page_strategic-osint .so-badge-blue,
+body.strategic-osint_page_strategic-osint .so-badge-blue{background:#e0e7ff!important;color:#1e40af!important}
+#adminmenu .wp-submenu .sod-v19-group-title{color:#475569!important}

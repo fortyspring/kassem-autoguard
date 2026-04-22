@@ -1,0 +1,168 @@
+/**
+ * Archive Cleanup Admin Styles - OSINT-LB PRO
+ * 
+ * @package OSINT_LB_PRO
+ */
+
+.so-cleanup-dashboard {
+    max-width: 1200px;
+}
+
+.cleanup-cards {
+    margin-bottom: 30px;
+}
+
+.cleanup-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cleanup-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cleanup-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.cleanup-card p {
+    margin: 0;
+}
+
+#dirty-count,
+#cleaned-count {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.cleanup-control-panel {
+    margin-bottom: 30px;
+}
+
+.cleanup-control-panel h2 {
+    margin-top: 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f1;
+}
+
+#batch-size {
+    min-width: 150px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+}
+
+#start-cleanup-btn,
+#stop-cleanup-btn {
+    padding: 10px 20px;
+    font-size: 15px;
+    height: auto;
+    line-height: 1.4;
+}
+
+#progress-container {
+    margin: 20px 0;
+}
+
+#progress-bar {
+    background: linear-gradient(90deg, #007cba 0%, #00a0d2 100%);
+    transition: width 0.3s ease;
+    border-radius: 4px 0 0 4px;
+}
+
+#progress-text {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+#log-container {
+    background: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+}
+
+#log-content {
+    font-family: monospace;
+    font-size: 13px;
+}
+
+#log-content > div {
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+    border-radius: 3px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.recent-cleanups table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.recent-cleanups th,
+.recent-cleanups td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.recent-cleanups th {
+    background: #f9f9f9;
+    font-weight: 600;
+    color: #333;
+}
+
+.recent-cleanups tr:hover {
+    background: #f9f9f9;
+}
+
+/* RTL Support */
+.rtl .cleanup-card {
+    text-align: right;
+}
+
+.rtl #log-content > div {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Responsive */
+@media screen and (max-width: 782px) {
+    .cleanup-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    #dirty-count,
+    #cleaned-count {
+        font-size: 28px;
+    }
+    
+    .recent-cleanups table {
+        font-size: 12px;
+    }
+    
+    .recent-cleanups th,
+    .recent-cleanups td {
+        padding: 8px;
+    }
+}

@@ -1,0 +1,98 @@
+.nl-wrap{font-family:'Segoe UI',Tahoma,sans-serif;color:#c8dff2;direction:rtl}
+.nl-toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;background:#0f172a;padding:16px;border-radius:10px;margin-bottom:16px;border:1px solid #1e3a5f}
+.nl-toolbar input,.nl-toolbar select{background:#1e293b;border:1px solid #334155;color:#c8dff2;padding:7px 10px;border-radius:6px;font-size:13px}
+.nl-toolbar input{min-width:220px}
+.nl-btn{padding:8px 16px;border-radius:6px;border:none;cursor:pointer;font-weight:700;font-size:13px;transition:all .2s}
+.nl-btn-primary{background:#2563eb;color:#fff}
+.nl-btn-primary:hover{background:#1d4ed8}
+.nl-btn-danger{background:#dc2626;color:#fff}
+.nl-btn-danger:hover{background:#b91c1c}
+.nl-btn-success{background:#16a34a;color:#fff}
+.nl-btn-success:hover{background:#15803d}
+.nl-btn-sm{padding:4px 10px;font-size:11px;border-radius:4px}
+.nl-table{width:100%;border-collapse:collapse;font-size:12px}
+.nl-table th{background:#0f2744;color:#60a5fa;padding:10px 8px;text-align:right;border-bottom:2px solid #1e3a5f;white-space:nowrap}
+.nl-table td{padding:8px 8px;border-bottom:1px solid #1a2e4a;vertical-align:middle}
+.nl-table tr:hover td{background:#0d1e36}
+.nl-score{display:inline-block;padding:2px 8px;border-radius:10px;font-weight:700;font-size:11px}
+.nl-score-crit{background:#7f1d1d;color:#fca5a5}
+.nl-score-high{background:#78350f;color:#fde68a}
+.nl-score-med{background:#064e3b;color:#6ee7b7}
+.nl-score-low{background:#1e293b;color:#94a3b8}
+.nl-badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;background:#1e3a5f;color:#7dd3fc}
+.nl-pagination{display:flex;gap:8px;align-items:center;margin-top:14px;justify-content:center}
+.nl-page-btn{background:#1e293b;color:#c8dff2;border:1px solid #334155;padding:5px 12px;border-radius:5px;cursor:pointer;font-size:13px}
+.nl-page-btn.active,.nl-page-btn:hover{background:#2563eb;color:#fff;border-color:#2563eb}
+.nl-modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:99999;align-items:center;justify-content:center}
+.nl-modal-bg.open{display:flex}
+.nl-modal{background:#0f172a;border:1px solid #1e3a5f;border-radius:14px;padding:20px;width:min(860px,96vw)!important;max-height:90vh;overflow-y:auto;direction:rtl;color:#fff;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.nl-modal h3{margin:0 0 18px;color:#fff;font-size:16px;border-bottom:1px solid #1e3a5f;padding-bottom:10px}
+.nl-modal textarea{width:100%;resize:vertical;min-height:72px}
+.nl-modal button{white-space:nowrap}
+.nl-modal select,.nl-modal input,.nl-modal textarea{color:#fff!important;background:#1b2a3d!important;border:1px solid #33506f!important}
+.nl-modal select option{color:#fff;background:#102033}
+.nl-modal .nl-form-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;align-items:start}
+.nl-modal .nl-form-field{display:flex!important;flex-direction:column!important;gap:6px!important;min-width:0!important}
+.nl-modal .nl-form-full{grid-column:1/-1!important}
+.nl-modal .nl-form-field label{font-size:11px;color:#fff;font-weight:700}
+.nl-modal .nl-form-field input,.nl-modal .nl-form-field select,.nl-modal .nl-form-field textarea{width:100%!important;box-sizing:border-box!important;font-weight:500}
+.nl-modal #nl-edit-status{display:none!important}
+.nl-modal .nl-form-field:has(#nl-edit-status){display:none!important}
+.nl-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#16a34a;color:#fff;padding:12px 28px;border-radius:8px;font-weight:700;z-index:999999;display:none}
+.nl-learning-badge{display:inline-block;background:#1e3a5f;color:#7dd3fc;border-radius:8px;padding:2px 7px;font-size:10px;margin-right:4px}
+.nl-meta-stack{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.nl-mini-chip{display:inline-block;background:#13263d;border:1px solid #27486b;color:#c8dff2;border-radius:999px;padding:2px 7px;font-size:10px;line-height:1.4}
+.nl-mini-chip b{color:#7dd3fc;font-weight:700}
+.nl-stats-bar{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+.nl-stat-pill{background:#0f2744;border:1px solid #1e3a5f;border-radius:8px;padding:8px 16px;font-size:12px;color:#94a3b8}
+.nl-stat-pill b{color:#60a5fa;font-size:16px;display:block}
+.nl-title-link{color:#dbeafe;cursor:pointer;font-weight:700;text-decoration:none;border-bottom:1px dashed rgba(125,211,252,.35)}
+.nl-title-link:hover{color:#7dd3fc;border-bottom-color:#7dd3fc}
+.nl-status-box{display:none;margin-bottom:12px;background:#0b2038;border:1px solid #1e3a5f;border-radius:10px;padding:10px 14px;color:#c8dff2}
+.nl-status-box.active{display:block}
+.so-admin-card [id^="so-re-"],.so-admin-card [id^="so-dup-"]{font-variant-numeric:tabular-nums}
+@media(max-width:760px){
+  .nl-modal{width:min(96vw,96vw)!important;padding:16px!important}
+  .nl-modal .nl-form-grid{grid-template-columns:1fr!important}
+  .nl-toolbar{align-items:stretch}
+}
+
+
+/* V19.1.3 light hard override */
+body.toplevel_page_strategic-osint-newslog .nl-wrap,
+body.strategic-osint_page_strategic-osint-newslog .nl-wrap{color:#111827!important}
+body.toplevel_page_strategic-osint-newslog .nl-table th,
+body.strategic-osint_page_strategic-osint-newslog .nl-table th{background:#f8fafc!important;color:#1f2937!important;border-bottom-color:#dbe3ee!important}
+body.toplevel_page_strategic-osint-newslog .nl-table td,
+body.strategic-osint_page_strategic-osint-newslog .nl-table td{background:#fff!important;color:#334155!important;border-bottom-color:#e2e8f0!important}
+body.toplevel_page_strategic-osint-newslog .nl-title-link,
+body.strategic-osint_page_strategic-osint-newslog .nl-title-link{color:#0f172a!important}
+body.toplevel_page_strategic-osint-newslog .nl-toolbar,
+body.strategic-osint_page_strategic-osint-newslog .nl-toolbar,
+body.toplevel_page_strategic-osint-newslog .nl-modal,
+body.strategic-osint_page_strategic-osint-newslog .nl-modal{background:#fff!important;border-color:#dbe3ee!important;color:#111827!important}
+
+
+/* V19.1.4 modal field labels visibility fix */
+body.toplevel_page_strategic-osint-newslog .nl-modal h3,
+body.strategic-osint_page_strategic-osint-newslog .nl-modal h3{color:#0f172a!important;border-bottom-color:#dbe3ee!important}
+body.toplevel_page_strategic-osint-newslog .nl-modal .nl-form-field label,
+body.strategic-osint_page_strategic-osint-newslog .nl-modal .nl-form-field label{display:block!important;color:#334155!important;font-size:12px!important;font-weight:800!important;line-height:1.6!important;opacity:1!important;visibility:visible!important}
+body.toplevel_page_strategic-osint-newslog .nl-modal select,
+body.toplevel_page_strategic-osint-newslog .nl-modal input,
+body.toplevel_page_strategic-osint-newslog .nl-modal textarea,
+body.strategic-osint_page_strategic-osint-newslog .nl-modal select,
+body.strategic-osint_page_strategic-osint-newslog .nl-modal input,
+body.strategic-osint_page_strategic-osint-newslog .nl-modal textarea{background:#ffffff!important;color:#0f172a!important;border:1px solid #94a3b8!important}
+body.toplevel_page_strategic-osint-newslog .nl-modal select option,
+body.strategic-osint_page_strategic-osint-newslog .nl-modal select option{background:#ffffff!important;color:#0f172a!important}
+body.toplevel_page_strategic-osint-newslog .nl-modal #nl-edit-meta,
+body.strategic-osint_page_strategic-osint-newslog .nl-modal #nl-edit-meta,
+body.toplevel_page_strategic-osint-newslog .nl-modal #nl-edit-evaluation,
+body.strategic-osint_page_strategic-osint-newslog .nl-modal #nl-edit-evaluation{color:#0f172a!important}
+
+
+/* V19.1.5 absolute modal label visibility hard fix */
+.nl-modal .nl-field-title{display:block!important;color:#0f172a!important;background:#f8fafc!important;border:1px solid #cbd5e1!important;padding:6px 10px!important;border-radius:8px!important;font-size:12px!important;font-weight:800!important;line-height:1.6!important;opacity:1!important;visibility:visible!important;text-shadow:none!important;-webkit-text-fill-color:#0f172a!important;}
+.nl-modal .nl-form-field>label:not(.nl-field-title){display:block!important;color:#0f172a!important;opacity:1!important;visibility:visible!important;text-shadow:none!important;-webkit-text-fill-color:#0f172a!important;}
+.nl-modal *, .nl-modal label, .nl-modal span{caret-color:auto;}

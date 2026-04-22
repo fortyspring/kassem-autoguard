@@ -1,0 +1,269 @@
+{
+  "meta": {
+    "name": "World Leaders Master Dictionary 2026",
+    "version": "1.0",
+    "type": "OSINT_Engine_Ready",
+    "last_updated": "2026-01-01"
+  },
+  "position_categories": [
+    "رئيس جمهورية", "ملك", "أمير", "سلطان", "مرشد أعلى",
+    "رئيس وزراء", "مستشار", "وزير دفاع", "وزير خارجية",
+    "رئيس أركان", "قائد جيش", "أمين عام", "مدير وكالة",
+    "سفير", "مبعوث خاص", "رئيس مجلس قيادة", "رئيس حكومة"
+  ],
+  "influence_scores": {
+    "رئيس دولة نووية": 100,
+    "رئيس حكومة قوة كبرى": 95,
+    "وزير دفاع": 90,
+    "رئيس أركان": 88,
+    "وزير خارجية": 82,
+    "أمين عام منظمة": 80,
+    "سفير": 70,
+    "default": 50
+  },
+  "aliases_database": {
+    "trump": ["ترامب", "دونالد ترامب", "Donald Trump", "President Trump"],
+    "netanyahu": ["نتنياهو", "بنيامين نتنياهو", "بيبي", "Benjamin Netanyahu"],
+    "khamenei": ["خامنئي", "السيد الخامنئي", "علي خامنئي"],
+    "putin": ["بوتين", "فلاديمير بوتين", "الرئيس الروسي"]
+  },
+  "regions": {
+    "conflict_zones": {
+      "palestine_israel": {
+        "name_ar": "فلسطين / إسرائيل",
+        "leaders": [
+          {"name": "إسحاق هرتسوغ", "role": "رئيس الدولة", "country": "Israel"},
+          {"name": "بنيامين نتنياهو", "role": "رئيس الوزراء", "country": "Israel", "aliases": ["بيبي", "Benjamin Netanyahu"]},
+          {"name": "يسرائيل كاتس", "role": "وزير الدفاع", "country": "Israel"},
+          {"name": "جدعون ساعر", "role": "وزير الخارجية", "country": "Israel"},
+          {"name": "إيال زمير", "role": "رئيس الأركان", "country": "Israel"}
+        ]
+      },
+      "lebanon": {
+        "name_ar": "لبنان",
+        "leaders": [
+          {"name": "جوزيف عون", "role": "رئيس الجمهورية", "country": "Lebanon"},
+          {"name": "نواف سلام", "role": "رئيس الوزراء", "country": "Lebanon"},
+          {"name": "ميشال منسى", "role": "وزير الدفاع", "country": "Lebanon"},
+          {"name": "يوسف رجي", "role": "وزير الخارجية", "country": "Lebanon"},
+          {"name": "رودولف هيكل", "role": "قائد الجيش", "country": "Lebanon"}
+        ]
+      },
+      "syria": {
+        "name_ar": "سوريا",
+        "leaders": [
+          {"name": "أحمد الشرع", "role": "رئيس المرحلة الانتقالية / رئيس الدولة", "country": "Syria"},
+          {"name": "محمد البشير", "role": "رئيس الوزراء", "country": "Syria"},
+          {"name": "مرهف أبو قصرة", "role": "وزير الدفاع", "country": "Syria"},
+          {"name": "أسعد الشيباني", "role": "وزير الخارجية", "country": "Syria"},
+          {"name": "علي النعسان", "role": "رئيس الأركان", "country": "Syria"}
+        ]
+      },
+      "iran": {
+        "name_ar": "إيران",
+        "leaders": [
+          {"name": "علي خامنئي", "role": "المرشد الأعلى", "country": "Iran", "aliases": ["السيد الخامنئي"]},
+          {"name": "مسعود بزشكيان", "role": "رئيس الجمهورية", "country": "Iran"},
+          {"name": "محمد رضا عارف", "role": "النائب الأول / قائم بالأعمال التنفيذي", "country": "Iran"},
+          {"name": "عزيز نصير زاده", "role": "وزير الدفاع", "country": "Iran"},
+          {"name": "عباس عراقجي", "role": "وزير الخارجية", "country": "Iran"},
+          {"name": "محمد باقري", "role": "رئيس الأركان", "country": "Iran"}
+        ]
+      },
+      "iraq": {
+        "name_ar": "العراق",
+        "leaders": [
+          {"name": "عبد اللطيف رشيد", "role": "رئيس الجمهورية", "country": "Iraq"},
+          {"name": "محمد شياع السوداني", "role": "رئيس الوزراء", "country": "Iraq"},
+          {"name": "ثابت العباسي", "role": "وزير الدفاع", "country": "Iraq"},
+          {"name": "فؤاد حسين", "role": "وزير الخارجية", "country": "Iraq"},
+          {"name": "عبد الأمير يار الله", "role": "رئيس الأركان", "country": "Iraq"}
+        ]
+      },
+      "yemen": {
+        "name_ar": "اليمن",
+        "leaders": [
+          {"name": "رشاد العليمي", "role": "رئيس مجلس القيادة الرئاسي", "country": "Yemen"},
+          {"name": "أحمد عوض بن مبارك", "role": "رئيس الوزراء", "country": "Yemen"},
+          {"name": "محسن الداعري", "role": "وزير الدفاع", "country": "Yemen"},
+          {"name": "شائع الزنداني", "role": "وزير الخارجية", "country": "Yemen"}
+        ]
+      },
+      "russia": {
+        "name_ar": "روسيا",
+        "leaders": [
+          {"name": "فلاديمير بوتين", "role": "رئيس الجمهورية", "country": "Russia", "aliases": ["الرئيس الروسي"]},
+          {"name": "ميخائيل ميشوستين", "role": "رئيس الوزراء", "country": "Russia"},
+          {"name": "أندريه بيلوسوف", "role": "وزير الدفاع", "country": "Russia"},
+          {"name": "سيرغي لافروف", "role": "وزير الخارجية", "country": "Russia"},
+          {"name": "فاليري غيراسيموف", "role": "رئيس الأركان", "country": "Russia"}
+        ]
+      },
+      "ukraine": {
+        "name_ar": "أوكرانيا",
+        "leaders": [
+          {"name": "فولوديمير زيلينسكي", "role": "رئيس الجمهورية", "country": "Ukraine"},
+          {"name": "دينيس شميهال", "role": "رئيس الوزراء", "country": "Ukraine"},
+          {"name": "رستم عمروف", "role": "وزير الدفاع", "country": "Ukraine"},
+          {"name": "أندري سيبيها", "role": "وزير الخارجية", "country": "Ukraine"},
+          {"name": "أوليكساندر سيرسكي", "role": "رئيس الأركان", "country": "Ukraine"}
+        ]
+      },
+      "china_taiwan": {
+        "name_ar": "الصين / تايوان",
+        "leaders": [
+          {"name": "شي جين بينغ", "role": "رئيس الصين", "country": "China"},
+          {"name": "لي تشيانغ", "role": "رئيس الوزراء", "country": "China"},
+          {"name": "دونغ جون", "role": "وزير الدفاع", "country": "China"},
+          {"name": "وانغ يي", "role": "وزير الخارجية", "country": "China"},
+          {"name": "لاي تشينغ تي", "role": "رئيس تايوان", "country": "Taiwan"},
+          {"name": "تشو جونغ تاي", "role": "رئيس الوزراء", "country": "Taiwan"},
+          {"name": "ويلينغتون كو", "role": "وزير الدفاع", "country": "Taiwan"},
+          {"name": "لين تشيا لونغ", "role": "وزير الخارجية", "country": "Taiwan"}
+        ]
+      }
+    },
+    "arab_world": {
+      "saudi_arabia": {
+        "name_ar": "السعودية",
+        "leaders": [
+          {"name": "سلمان بن عبدالعزيز", "role": "الملك", "country": "Saudi Arabia"},
+          {"name": "محمد بن سلمان", "role": "رئيس الوزراء / ولي العهد", "country": "Saudi Arabia"},
+          {"name": "خالد بن سلمان", "role": "وزير الدفاع", "country": "Saudi Arabia"},
+          {"name": "فيصل بن فرحان", "role": "وزير الخارجية", "country": "Saudi Arabia"}
+        ]
+      },
+      "uae": {
+        "name_ar": "الإمارات",
+        "leaders": [
+          {"name": "محمد بن زايد", "role": "رئيس الدولة", "country": "UAE"},
+          {"name": "محمد بن راشد", "role": "نائب الرئيس / رئيس الوزراء", "country": "UAE"},
+          {"name": "عبدالله بن زايد", "role": "وزير الخارجية", "country": "UAE"}
+        ]
+      },
+      "qatar": {
+        "name_ar": "قطر",
+        "leaders": [
+          {"name": "تميم بن حمد", "role": "الأمير", "country": "Qatar"},
+          {"name": "محمد بن عبدالرحمن آل ثاني", "role": "رئيس الوزراء / الخارجية", "country": "Qatar"}
+        ]
+      },
+      "jordan": {
+        "name_ar": "الأردن",
+        "leaders": [
+          {"name": "عبدالله الثاني", "role": "الملك", "country": "Jordan"},
+          {"name": "جعفر حسان", "role": "رئيس الوزراء", "country": "Jordan"},
+          {"name": "أيمن الصفدي", "role": "وزير الخارجية", "country": "Jordan"}
+        ]
+      },
+      "egypt": {
+        "name_ar": "مصر",
+        "leaders": [
+          {"name": "عبد الفتاح السيسي", "role": "رئيس الجمهورية", "country": "Egypt"},
+          {"name": "مصطفى مدبولي", "role": "رئيس الوزراء", "country": "Egypt"},
+          {"name": "عبد المجيد صقر", "role": "وزير الدفاع", "country": "Egypt"},
+          {"name": "بدر عبد العاطي", "role": "وزير الخارجية", "country": "Egypt"}
+        ]
+      },
+      "algeria": {
+        "name_ar": "الجزائر",
+        "leaders": [
+          {"name": "عبد المجيد تبون", "role": "رئيس الجمهورية", "country": "Algeria"},
+          {"name": "نذير العرباوي", "role": "رئيس الوزراء", "country": "Algeria"}
+        ]
+      },
+      "morocco": {
+        "name_ar": "المغرب",
+        "leaders": [
+          {"name": "محمد السادس", "role": "الملك", "country": "Morocco"},
+          {"name": "عزيز أخنوش", "role": "رئيس الحكومة", "country": "Morocco"},
+          {"name": "ناصر بوريطة", "role": "وزير الخارجية", "country": "Morocco"}
+        ]
+      },
+      "tunisia": {
+        "name_ar": "تونس",
+        "leaders": [
+          {"name": "قيس سعيد", "role": "رئيس الجمهورية", "country": "Tunisia"},
+          {"name": "كمال المدوري", "role": "رئيس الحكومة", "country": "Tunisia"}
+        ]
+      },
+      "oman": {
+        "name_ar": "عمان",
+        "leaders": [
+          {"name": "هيثم بن طارق", "role": "السلطان", "country": "Oman"},
+          {"name": "شهاب بن طارق", "role": "نائب رئيس الوزراء", "country": "Oman"},
+          {"name": "بدر البوسعيدي", "role": "وزير الخارجية", "country": "Oman"}
+        ]
+      },
+      "kuwait": {
+        "name_ar": "الكويت",
+        "leaders": [
+          {"name": "مشعل الأحمد", "role": "الأمير", "country": "Kuwait"},
+          {"name": "أحمد عبدالله الصباح", "role": "رئيس الوزراء", "country": "Kuwait"}
+        ]
+      },
+      "bahrain": {
+        "name_ar": "البحرين",
+        "leaders": [
+          {"name": "حمد بن عيسى", "role": "الملك", "country": "Bahrain"},
+          {"name": "سلمان بن حمد", "role": "رئيس الوزراء", "country": "Bahrain"}
+        ]
+      }
+    },
+    "international_orgs": {
+      "un_and_related": {
+        "name_ar": "الأمم المتحدة والمنظمات ذات الصلة",
+        "leaders": [
+          {"name": "أنطونيو غوتيريش", "role": "الأمين العام للأمم المتحدة", "org": "UN"},
+          {"name": "رافائيل غروسي", "role": "الوكالة الدولية للطاقة الذرية", "org": "IAEA"},
+          {"name": "تيدروس أدهانوم", "role": "منظمة الصحة العالمية", "org": "WHO"},
+          {"name": "كريستالينا جورجيفا", "role": "صندوق النقد الدولي", "org": "IMF"},
+          {"name": "أجاي بانغا", "role": "البنك الدولي", "org": "World Bank"},
+          {"name": "أحمد أبو الغيط", "role": "جامعة الدول العربية", "org": "Arab League"},
+          {"name": "أورسولا فون دير لاين", "role": "المفوضية الأوروبية", "org": "EU Commission"},
+          {"name": "شارل ميشال", "role": "القيادة الأوروبية", "org": "European Council"},
+          {"name": "جوزيب بوريل", "role": "القيادة الدبلوماسية الأوروبية (سابقًا)", "org": "EU Diplomacy"}
+        ]
+      }
+    }
+  },
+  "groups_membership": {
+    "BRICS": [
+      {"country": "China", "leader": "شي جين بينغ"},
+      {"country": "Russia", "leader": "فلاديمير بوتين"},
+      {"country": "India", "leader": "ناريندرا مودي"},
+      {"country": "Brazil", "leader": "لويس إيناسيو لولا دا سيلفا"},
+      {"country": "South Africa", "leader": "سيريل رامافوزا"},
+      {"country": "Saudi Arabia", "leader": "محمد بن سلمان"},
+      {"country": "UAE", "leader": "محمد بن زايد"},
+      {"country": "Egypt", "leader": "عبد الفتاح السيسي"},
+      {"country": "Ethiopia", "leader": "آبي أحمد"},
+      {"country": "Iran", "leader": "مسعود بزشكيان / علي خامنئي"}
+    ],
+    "NATO_Key_Figures": [
+      {"name": "مارك روته", "role": "الأمين العام للناتو"},
+      {"name": "كير ستارمر", "role": "رئيس وزراء بريطانيا", "country": "UK"},
+      {"name": "إيمانويل ماكرون", "role": "رئيس فرنسا", "country": "France"},
+      {"name": "أولاف شولتس", "role": "مستشار ألمانيا", "country": "Germany"},
+      {"name": "رجب طيب أردوغان", "role": "رئيس تركيا", "country": "Turkey"},
+      {"name": "جورجيا ميلوني", "role": "رئيسة وزراء إيطاليا", "country": "Italy"},
+      {"name": "جاستن ترودو", "role": "رئيس وزراء كندا", "country": "Canada"},
+      {"note": "الولايات المتحدة ممثلة بالرئيس الحالي (تحديث ديناميكي مطلوب)"}
+    ],
+    "G20_Members": [
+      "United States", "China", "Russia", "Saudi Arabia", "Turkey",
+      "India", "Brazil", "Germany", "France", "United Kingdom",
+      "Italy", "Canada", "Australia", "Japan", "South Korea",
+      "South Africa", "Argentina", "Mexico", "Indonesia", "European Union"
+    ]
+  },
+  "additional_categories_suggestions": [
+    "قادة المقاومة",
+    "رؤساء الاستخبارات",
+    "وزراء الطاقة",
+    "وزراء المالية",
+    "قادة البنوك المركزية",
+    "رؤساء البرلمانات",
+    "ولاة / حكام الولايات الكبرى"
+  ]
+}

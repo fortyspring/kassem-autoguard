@@ -1,0 +1,39 @@
+<?php
+/**
+ * PHPUnit Test Suite Configuration for OSINT Pro
+ */
+
+return [
+    'testsuites' => [
+        [
+            'name' => 'Unit Tests',
+            'files' => [
+                'tests/Unit/**/*.php'
+            ]
+        ],
+        [
+            'name' => 'Integration Tests',
+            'files' => [
+                'tests/Integration/**/*.php'
+            ]
+        ]
+    ],
+    'source' => [
+        'include' => [
+            'src/',
+            'includes/'
+        ],
+        'exclude' => [
+            'tests/',
+            'vendor/'
+        ]
+    ],
+    'coverage' => [
+        'target' => 80,
+        'report' => [
+            'html' => 'tests/coverage/html',
+            'text' => 'tests/coverage/coverage.txt',
+            'clover' => 'tests/coverage/clover.xml'
+        ]
+    ]
+];
