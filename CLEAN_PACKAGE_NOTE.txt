@@ -1,0 +1,7 @@
+OSINT-LB PRO Clean Package
+This package keeps runtime files only and removes old/redundant non-runtime files such as:
+- markdown docs
+- tests
+- composer/phpunit config
+- duplicate fixed plugin file
+- SQL helper dump

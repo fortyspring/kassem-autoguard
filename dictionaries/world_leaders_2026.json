@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "version": "2026.1",
+    "last_updated": "2026-01-15",
+    "description": "World Leaders Master Dictionary for OSINT Engine",
+    "encoding": "UTF-8"
+  },
+  "conflict_zones": {
+    "palestine_israel": {
+      "region_name": "فلسطين / إسرائيل",
+      "leaders": [
+        {"name_ar": "إسحاق هرتسوغ", "name_en": "Isaac Herzog", "role": "رئيس الدولة", "priority": 98},
+        {"name_ar": "بنيامين نتنياهو", "name_en": "Benjamin Netanyahu", "alias": ["بيبي", "Bibi"], "role": "رئيس الوزراء", "priority": 100},
+        {"name_ar": "يسرائيل كاتس", "name_en": "Israel Katz", "role": "وزير الدفاع", "priority": 90},
+        {"name_ar": "جدعون ساعر", "name_en": "Gideon Sa'ar", "role": "وزير الخارجية", "priority": 85},
+        {"name_ar": "إيال زمير", "name_en": "Eyal Zamir", "role": "رئيس الأركان", "priority": 88}
+      ]
+    },
+    "lebanon": {
+      "region_name": "لبنان",
+      "leaders": [
+        {"name_ar": "جوزيف عون", "name_en": "Joseph Aoun", "role": "رئيس الجمهورية", "priority": 98},
+        {"name_ar": "نواف سلام", "name_en": "Nawaf Salam", "role": "رئيس الوزراء", "priority": 95},
+        {"name_ar": "ميشال منسى", "name_en": "Michel Mansour", "role": "وزير الدفاع", "priority": 90},
+        {"name_ar": "يوسف رجي", "name_en": "Youssef Raji", "role": "وزير الخارجية", "priority": 85},
+        {"name_ar": "رودولف هيكل", "name_en": "Rudolf Hikal", "role": "قائد الجيش", "priority": 88}
+      ]
+    },
+    "syria": {
+      "region_name": "سوريا",
+      "leaders": [
+        {"name_ar": "أحمد الشرع", "name_en": "Ahmed al-Sharaa", "alias": ["أبو محمد الجولاني"], "role": "رئيس المرحلة الانتقالية", "priority": 100},
+        {"name_ar": "محمد البشير", "name_en": "Mohammed al-Bashir", "role": "رئيس الوزراء", "priority": 95},
+        {"name_ar": "مرهف أبو قصرة", "name_en": "Marhaf Abu Qasra", "role": "وزير الدفاع", "priority": 90},
+        {"name_ar": "أسعد الشيباني", "name_en": "Asaad al-Shaibani", "role": "وزير الخارجية", "priority": 85},
+        {"name_ar": "علي النعسان", "name_en": "Ali al-Naasan", "role": "رئيس الأركان", "priority": 88}
+      ]
+    },
+    "iran": {
+      "region_name": "إيران",
+      "leaders": [
+        {"name_ar": "علي خامنئي", "name_en": "Ali Khamenei", "alias": ["المرشد", "Sayyid Ali"], "role": "المرشد الأعلى", "priority": 100},
+        {"name_ar": "مسعود بزشكيان", "name_en": "Masoud Pezeshkian", "role": "رئيس الجمهورية", "priority": 98},
+        {"name_ar": "محمد رضا عارف", "name_en": "Mohammad Reza Aref", "role": "النائب الأول للرئيس", "priority": 90},
+        {"name_ar": "عزيز نصير زاده", "name_en": "Aziz Nasirzadeh", "role": "وزير الدفاع", "priority": 90},
+        {"name_ar": "عباس عراقجي", "name_en": "Abbas Araghchi", "role": "وزير الخارجية", "priority": 85},
+        {"name_ar": "محمد باقري", "name_en": "Mohammad Bagheri", "role": "رئيس الأركان", "priority": 88}
+      ]
+    },
+    "iraq": {
+      "region_name": "العراق",
+      "leaders": [
+        {"name_ar": "عبد اللطيف رشيد", "name_en": "Abdul Latif Rashid", "role": "رئيس الجمهورية", "priority": 95},
+        {"name_ar": "محمد شياع السوداني", "name_en": "Mohammed Shia' Al-Sudani", "role": "رئيس الوزراء", "priority": 98},
+        {"name_ar": "ثابت العباسي", "name_en": "Thabet Al-Abbasi", "role": "وزير الدفاع", "priority": 90},
+        {"name_ar": "فؤاد حسين", "name_en": "Fuad Hussein", "role": "وزير الخارجية", "priority": 85},
+        {"name_ar": "عبد الأمير يار الله", "name_en": "Abdul Amir Yarallah", "role": "رئيس الأركان", "priority": 88}
+      ]
+    },
+    "yemen": {
+      "region_name": "اليمن",
+      "leaders": [
+        {"name_ar": "رشاد العليمي", "name_en": "Rashad al-Alimi", "role": "رئيس مجلس القيادة الرئاسي", "priority": 95},
+        {"name_ar": "أحمد عوض بن مبارك", "name_en": "Ahmed Awad bin Mubarak", "role": "رئيس الوزراء", "priority": 90},
+        {"name_ar": "محسن الداعري", "name_en": "Mohsen al-Daeri", "role": "وزير الدفاع", "priority": 88},
+        {"name_ar": "شائع الزنداني", "name_en": "Shaei al-Zindani", "role": "وزير الخارجية", "priority": 85}
+      ]
+    },
+    "russia": {
+      "region_name": "روسيا",
+      "leaders": [
+        {"name_ar": "فلاديمير بوتين", "name_en": "Vladimir Putin", "alias": ["الرئيس الروسي"], "role": "رئيس الجمهورية", "priority": 100},
+        {"name_ar": "ميخائيل ميشوستين", "name_en": "Mikhail Mishustin", "role": "رئيس الوزراء", "priority": 95},
+        {"name_ar": "أندريه بيلوسوف", "name_en": "Andrei Belousov", "role": "وزير الدفاع", "priority": 92},
+        {"name_ar": "سيرغي لافروف", "name_en": "Sergey Lavrov", "role": "وزير الخارجية", "priority": 90},
+        {"name_ar": "فاليري غيراسيموف", "name_en": "Valery Gerasimov", "role": "رئيس الأركان", "priority": 88}
+      ]
+    },
+    "ukraine": {
+      "region_name": "أوكرانيا",
+      "leaders": [
+        {"name_ar": "فولوديمير زيلينسكي", "name_en": "Volodymyr Zelensky", "role": "رئيس الجمهورية", "priority": 100},
+        {"name_ar": "دينيس شميهال", "name_en": "Denys Shmyhal", "role": "رئيس الوزراء", "priority": 95},
+        {"name_ar": "رستم عمروف", "name_en": "Rustem Umerov", "role": "وزير الدفاع", "priority": 90},
+        {"name_ar": "أندري سيبيها", "name_en": "Andrii Sybiha", "role": "وزير الخارجية", "priority": 85},
+        {"name_ar": "أوليكساندر سيرسكي", "name_en": "Oleksandr Syrskyi", "role": "القائد العام", "priority": 88}
+      ]
+    },
+    "china_taiwan": {
+      "region_name": "الصين / تايوان",
+      "leaders": [
+        {"name_ar": "شي جين بينغ", "name_en": "Xi Jinping", "role": "رئيس الصين", "priority": 100},
+        {"name_ar": "لي تشيانغ", "name_en": "Li Qiang", "role": "رئيس الوزراء", "priority": 95},
+        {"name_ar": "دونغ جون", "name_en": "Dong Jun", "role": "وزير الدفاع", "priority": 90},
+        {"name_ar": "وانغ يي", "name_en": "Wang Yi", "role": "وزير الخارجية", "priority": 90},
+        {"name_ar": "لاي تشينغ تي", "name_en": "Lai Ching-te", "role": "رئيس تايوان", "priority": 95},
+        {"name_ar": "تشو جونغ تاي", "name_en": "Cho Jung-tai", "role": "رئيس وزراء تايوان", "priority": 90},
+        {"name_ar": "ويلينغتون كو", "name_en": "Wellington Koo", "role": "وزير دفاع تايوان", "priority": 85},
+        {"name_ar": "لين تشيا لونغ", "name_en": "Lin Chia-lung", "role": "وزير خارجية تايوان", "priority": 85}
+      ]
+    }
+  },
+  "arab_league": {
+    "saudi_arabia": {
+      "leaders": [
+        {"name_ar": "سلمان بن عبدالعزيز", "name_en": "Salman bin Abdulaziz", "role": "الملك", "priority": 100},
+        {"name_ar": "محمد بن سلمان", "name_en": "Mohammed bin Salman", "alias": ["MBS"], "role": "ولي العهد / رئيس الوزراء", "priority": 100},
+        {"name_ar": "خالد بن سلمان", "name_en": "Khaled bin Salman", "role": "وزير الدفاع", "priority": 95},
+        {"name_ar": "فيصل بن فرحان", "name_en": "Faisal bin Farhan", "role": "وزير الخارجية", "priority": 90}
+      ]
+    },
+    "uae": {
+      "leaders": [
+        {"name_ar": "محمد بن زايد", "name_en": "Mohamed bin Zayed", "alias": ["MBZ"], "role": "رئيس الدولة", "priority": 100},
+        {"name_ar": "محمد بن راشد", "name_en": "Mohammed bin Rashid", "role": "نائب الرئيس / رئيس الوزراء", "priority": 98},
+        {"name_ar": "عبدالله بن زايد", "name_en": "Abdullah bin Zayed", "role": "وزير الخارجية", "priority": 95}
+      ]
+    },
+    "qatar": {
+      "leaders": [
+        {"name_ar": "تميم بن حمد", "name_en": "Tamim bin Hamad", "role": "الأمير", "priority": 100},
+        {"name_ar": "محمد بن عبدالرحمن آل ثاني", "name_en": "Mohammed bin Abdulrahman Al Thani", "role": "رئيس الوزراء / الخارجية", "priority": 95}
+      ]
+    },
+    "jordan": {
+      "leaders": [
+        {"name_ar": "عبدالله الثاني", "name_en": "Abdullah II", "role": "الملك", "priority": 100},
+        {"name_ar": "جعفر حسان", "name_en": "Jafar Hassan", "role": "رئيس الوزراء", "priority": 95},
+        {"name_ar": "أيمن الصفدي", "name_en": "Ayman Safadi", "role": "وزير الخارجية", "priority": 90}
+      ]
+    },
+    "egypt": {
+      "leaders": [
+        {"name_ar": "عبد الفتاح السيسي", "name_en": "Abdel Fattah el-Sisi", "role": "رئيس الجمهورية", "priority": 100},
+        {"name_ar": "مصطفى مدبولي", "name_en": "Mostafa Madbouly", "role": "رئيس الوزراء", "priority": 95},
+        {"name_ar": "عبد المجيد صقر", "name_en": "Abdel Magid Sakr", "role": "وزير الدفاع", "priority": 90},
+        {"name_ar": "بدر عبد العاطي", "name_en": "Badr Abdelatty", "role": "وزير الخارجية", "priority": 90}
+      ]
+    },
+    "algeria": {
+      "leaders": [
+        {"name_ar": "عبد المجيد تبون", "name_en": "Abdelmadjid Tebboune", "role": "رئيس الجمهورية", "priority": 100},
+        {"name_ar": "نذير العرباوي", "name_en": "Nadir Larbaoui", "role": "رئيس الوزراء", "priority": 95}
+      ]
+    },
+    "morocco": {
+      "leaders": [
+        {"name_ar": "محمد السادس", "name_en": "Mohammed VI", "role": "الملك", "priority": 100},
+        {"name_ar": "عزيز أخنوش", "name_en": "Aziz Akhannouch", "role": "رئيس الحكومة", "priority": 95},
+        {"name_ar": "ناصر بوريطة", "name_en": "Nasser Bourita", "role": "وزير الخارجية", "priority": 90}
+      ]
+    },
+    "tunisia": {
+      "leaders": [
+        {"name_ar": "قيس سعيد", "name_en": "Kais Saied", "role": "رئيس الجمهورية", "priority": 100},
+        {"name_ar": "كمال المدوري", "name_en": "Kamel Maddouri", "role": "رئيس الحكومة", "priority": 95}
+      ]
+    },
+    "oman": {
+      "leaders": [
+        {"name_ar": "هيثم بن طارق", "name_en": "Haitham bin Tariq", "role": "السلطان", "priority": 100},
+        {"name_ar": "شهاب بن طارق", "name_en": "Shihab bin Tariq", "role": "نائب رئيس الوزراء", "priority": 90},
+        {"name_ar": "بدر البوسعيدي", "name_en": "Badr al-Busaidi", "role": "وزير الخارجية", "priority": 85}
+      ]
+    },
+    "kuwait": {
+      "leaders": [
+        {"name_ar": "مشعل الأحمد", "name_en": "Meshal Al-Ahmad", "role": "الأمير", "priority": 100},
+        {"name_ar": "أحمد عبدالله الصباح", "name_en": "Ahmad Abdullah Al-Sabah", "role": "رئيس الوزراء", "priority": 95}
+      ]
+    },
+    "bahrain": {
+      "leaders": [
+        {"name_ar": "حمد بن عيسى", "name_en": "Hamad bin Isa", "role": "الملك", "priority": 100},
+        {"name_ar": "سلمان بن حمد", "name_en": "Salman bin Hamad", "role": "ولي العهد / رئيس الوزراء", "priority": 95}
+      ]
+    }
+  },
+  "global_blocks": {
+    "brics": [
+      {"country": "China", "leader": "شي جين بينغ"},
+      {"country": "Russia", "leader": "فلاديمير بوتين"},
+      {"country": "India", "leader": "ناريندرا مودي"},
+      {"country": "Brazil", "leader": "لويس إيناسيو لولا دا سيلفا"},
+      {"country": "South Africa", "leader": "سيريل رامافوزا"},
+      {"country": "Saudi Arabia", "leader": "محمد بن سلمان"},
+      {"country": "UAE", "leader": "محمد بن زايد"},
+      {"country": "Egypt", "leader": "عبد الفتاح السيسي"},
+      {"country": "Ethiopia", "leader": "آبي أحمد"},
+      {"country": "Iran", "leader": "مسعود بزشكيان"}
+    ],
+    "nato": [
+      {"role": "الأمين العام", "name": "مارك روته"},
+      {"country": "USA", "leader": "دونالد ترامب", "note": "تحديث 2025"},
+      {"country": "UK", "leader": "كير ستارمر"},
+      {"country": "France", "leader": "إيمانويل ماكرون"},
+      {"country": "Germany", "leader": "أولاف شولتس"},
+      {"country": "Turkey", "leader": "رجب طيب أردوغان"},
+      {"country": "Italy", "leader": "جورجيا ميلوني"},
+      {"country": "Canada", "leader": "جاستن ترودو"}
+    ],
+    "g20_members": [
+      "الولايات المتحدة", "الصين", "روسيا", "السعودية", "تركيا", "الهند", "البرازيل", 
+      "ألمانيا", "فرنسا", "بريطانيا", "إيطاليا", "كندا", "أستراليا", "اليابان", 
+      "كوريا الجنوبية", "جنوب أفريقيا", "الأرجنتين", "المكسيك", "إندونيسيا", "الاتحاد الأوروبي"
+    ],
+    "international_orgs": [
+      {"org": "UN", "name": "أنطونيو غوتيريش", "role": "الأمين العام"},
+      {"org": "IAEA", "name": "رافائيل غروسي", "role": "المدير العام"},
+      {"org": "WHO", "name": "تيدروس أدهانوم", "role": "المدير العام"},
+      {"org": "IMF", "name": "كريستالينا جورجيفا", "role": "المديرة العامة"},
+      {"org": "World Bank", "name": "أجاي بانغا", "role": "الرئيس"},
+      {"org": "Arab League", "name": "أحمد أبو الغيط", "role": "الأمين العام"},
+      {"org": "EU Commission", "name": "أورسولا فون دير لاين", "role": "الرئيسة"},
+      {"org": "EU Council", "name": "أنطونيو كوستا", "role": "الرئيس", "note": "تحديث خلفاً لميشال"}
+    ]
+  },
+  "metadata": {
+    "roles_priority": {
+      "نواة نووية": 100,
+      "رئيس دولة": 98,
+      "رئيس حكومة": 95,
+      "ولي عهد": 94,
+      "وزير دفاع": 90,
+      "رئيس أركان": 88,
+      "وزير خارجية": 85,
+      "أمين عام منظمة": 80,
+      "سفير": 70
+    },
+    "search_aliases": {
+      "trump": ["ترامب", "دونالد ترامب", "Donald Trump", "President Trump", "DJT"],
+      "netanyahu": ["نتنياهو", "بنيامين نتنياهو", "بيبي", "Benjamin Netanyahu", "Bibi"],
+      "khamenei": ["خامنئي", "السيد الخامنئي", "علي خامنئي", "Ali Khamenei", "Supreme Leader"],
+      "putin": ["بوتين", "فلاديمير بوتين", "الرئيس الروسي", "Vladimir Putin"],
+      "mbs": ["محمد بن سلمان", "MBS", "Mohammed bin Salman"],
+      "mbz": ["محمد بن زايد", "MBZ", "Mohamed bin Zayed"]
+    }
+  }
+}
